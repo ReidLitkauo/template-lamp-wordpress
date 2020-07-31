@@ -1,0 +1,18 @@
+-###############################################################################
+-# /src/$-template-bridge.pug
+-# This file provides the bridge between the framework's render_template()
+-# and actually showing some HTML.
+-# Provides a basic framework for all pages for the site.
+
+html
+	head
+		
+		script(src="/static/$endpoint.js")
+		link(rel='stylesheet' href="/static/$endpoint.css")
+		
+		- require_once "{$_SERVER['DOCUMENT_ROOT']}/../templates/$endpoint.head.php"
+
+	
+	body
+		main
+			- require_once "{$_SERVER['DOCUMENT_ROOT']}/../templates/$endpoint.body.php"

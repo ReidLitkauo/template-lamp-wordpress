@@ -1,0 +1,1 @@
+<h1>Index page!</h1><p>You should see a bit of fancy styling on that header if CSS worked.</p>

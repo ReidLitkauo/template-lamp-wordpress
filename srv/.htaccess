@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /
+
+# Get rid of that pesky end slash
+# TODO Broken fix later
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.+)/$ /$1 [R=301,L]
+#RewriteRule ^(.*)/$ /$1 [END,R]
+
+# Re-route all endpoint requests through index.php, barring some special cases.
+RewriteRule ^(?!\/?(static|assets|phpmyadmin|uploads|wp-admin).*$)(.*)$ /index.php?__requested_page=$2 [END,NC,QSA]

@@ -1,0 +1,1 @@
+<title>You got a basic template site set up!!</title>
